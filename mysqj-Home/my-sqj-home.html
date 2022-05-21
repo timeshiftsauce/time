@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <link rel="shortcut icon" href="./image/icon2.svg" type="image/x-icon" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="keywords" content="前端,时迁酱,个人网站,开心宝宝们,交通中学,周晨鹭" />
+  <meta name="description" content="个人网站,时迁酱,周晨鹭" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var a_idx = 0;
+      window.onclick = function (event) {
+        var a = new Array(
+          "❤富强❤",
+          "❤民主❤",
+          "❤文明❤",
+          "❤和谐❤",
+          "❤自由❤",
+          "❤平等❤",
+          "❤公正❤",
+          "❤法治❤",
+          "❤爱国❤",
+          "❤敬业❤",
+          "❤诚信❤",
+          "❤友善❤"
+
+        );
+
+        var heart = document.createElement("b"); //创建b元素
+        heart.onselectstart = new Function("event.returnValue=false"); //防止拖动
+
+        document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+        a_idx = (a_idx + 1) % a.length;
+        heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+
+        var f = 16, // 字体大小
+          x = event.clientX - f / 2, // 横坐标
+          y = event.clientY - f, // 纵坐标
+          c = randomColor(), // 随机颜色
+          a = 1, // 透明度
+          s = 1.2; // 放大缩小
+
+        var timer = setInterval(function () {
+          //添加定时器
+          if (a <= 0) {
+            document.body.removeChild(heart);
+            clearInterval(timer);
+          } else {
+            heart.style.cssText =
+              "font-size:16px;cursor: default;position: fixed;color:" +
+              c +
+              ";left:" +
+              x +
+              "px;top:" +
+              y +
+              "px;opacity:" +
+              a +
+              ";transform:scale(" +
+              s +
+              ");";
+
+            y--;
+            a -= 0.016;
+            s += 0.002;
+          }
+        }, 15);
+      };
+      // 随机颜色
+      function randomColor() {
+        return (
+          "rgb(" +
+          ~~(Math.random() * 255) +
+          "," +
+          ~~(Math.random() * 255) +
+          "," +
+          ~~(Math.random() * 255) +
+          ")"
+        );
+      }
+    })();
+  </script>
+  <title>Time&nbsp;move&nbsp;sauce&nbsp;&&nbsp;Home</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="avatar-area">
+    <img src="./image/head.png" alt="" />
+  </div>
+  <div class="content">
+    <div class="body-content">
+      <h2>嗨！我是时迁酱：</h2>
+      <p style="text-indent: 12em">
+        很高兴认识你啊！当你看到本网站的时候说明我的第一个网站成功发布啦！你肯定会有很大的疑惑不就发布一个网站嘛有什么好稀奇的，其实这是我第一次入手“前端”并亲手制作的第一个个人网站虽然第一次网站做的并不是很好但是我知足啦，有个成语写说的好“知足常乐”我感觉人生就是这样凡是只要知足了就好不要到处和别人攀比。
+      </p>
+      <hr />
+      <p>
+        在这里我要重点感谢一下<a href="https://www.midorg.com/" target="_blank"
+          class="mingthank">康文昌</a>是他把我带到这强大的前端海洋中让我学会了很多也感谢<span style="
+              color: #61c5cc;
+              letter-spacing: 3px;
+              padding: 0px 8px 0px 8px;
+            ">元岛</span>中的各位学员让我在疑问重重的困境下帮助我体谅我谢谢大家。
+      </p>
+      <hr />
+      <h3>精美佳句：</h3>
+      <nb>
+        1、月亮斜挂在天空,笑盈盈的，星星挤满了银河，眨巴着眼睛。<br>
+        2、月亮像一个含羞的少女,一会儿躲进云间，一会儿又撩开面纱，露出娇容，整个世界都被月色浸成了梦幻般的银灰色。<br>
+        3、门外西边的林梢,挂着的上弦月已经变成一片金色的西瓜，不再是一条弯弯的眉毛。<br>
+        4、一弯新月宛如一叶小舟,翘着尖尖的船头，在深夜的静湖中划行，给我送来一片情思。<br>
+        5、一弯新月升起来了,像只玉琢的香蕉嵌在天幕上，漾着碧辉。<br>
+        6、夜晚,满月升起来了，一片宁静随着银雾般的月光洒在大地上。<br>
+        7、月亮渐渐升高,她身着白色的纱衣，娴静而安详，温柔而大方。她那银盘似的脸，透过柳梢，留下温和的笑容。<br>
+        8、夜,静极了，玉盘似的满月在云中穿行，淡淡的月光洒向大地。<br>
+        9、夜空挂满了星星,月亮像一只钓鱼的小船，仿佛航行在宽阔的银色的长河里。<br>
+        10、大的货色变小,小的东西也会变大。“大”与“小”经常在某种前提下向对方转化。大的丧失会因补救及时而变小，小的成就会因持续尽力而变大；“多”与“少”也是如斯，多的问题会因及时求教而减少，少的常识会因一直积聚而增多。<br>
+        11、明净似的圆月,已经被远方蓝蓝的高山托上天空。<br>
+        <nb />
+    </div>
+  </div>
+  <div class="copyright">
+    <br /><br />
+    版权所有: &copy;2022 时迁酱
+  </div>
+</body>
+
+</html>
